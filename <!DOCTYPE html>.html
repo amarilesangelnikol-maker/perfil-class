@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfilClass | Modeling & Etiquette Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark: #111111;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .reveal-on-hover img {
+            transition: transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
+        }
+        .reveal-on-hover:hover img {
+            transform: scale(1.05);
+        }
+
+        .cta-button {
+            transition: all 0.4s;
+            border: 1px solid var(--gold);
+        }
+        .cta-button:hover {
+            background-color: var(--gold);
+            color: white;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-[0.2em] uppercase serif">PerfilClass</span>
+            </div>
+           
+            <div class="hidden md:flex space-x-10 text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+                <a href="#inicio" class="nav-link text-dark">Inicio</a>
+                <a href="#programas" class="nav-link">Programas</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            
+            </a>
+
+            <button class="md:hidden text-2xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center pt-20 overflow-hidden bg-black">
+        <div class="absolute inset-0">
+            <img src=imagen7.jpg alt="[Modelo de Alta Costura]" class="w-full h-full object-cover opacity-60">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <span class="text-gold uppercase tracking-[0.4em] text-sm font-semibold mb-6 block">Elite Modeling Academy</span>
+                <h1 class="text-white text-7xl md:text-[100px] leading-[0.9] serif mb-8">
+                    Tu <span class="italic">Perfil</span>,<br>Tu Legado.
+                </h1>
+                <p class="text-white/80 text-lg md:text-xl font-light max-w-lg mb-12 leading-relaxed">
+                    Formamos la próxima generación de modelos internacionales con ética, estilo y proyección global.
+                    <div class="flex space-x-3">
+                    <a href="galeria.html">Ir a la galeria</a>
+                    <a href="nosotros.html" style="text-decoration: none; color: #1a1a1a; border-bottom: 1px solid #1a1a1a; font-family: 'Playfair Display', serif; text-transform: uppercase; letter-spacing: 2px; padding-bottom: 5px;">
+  Descubre Nuestra Esencia
+</a>
+                </p>
+                <div class="flex space-x-6">
+                    
+                
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-6 text-white/30 text-xs tracking-[0.5em] uppercase vertical-rl hidden lg:block">
+            Est. 2026 • PerfilClass Academy
+        </div>
+    </section>
+
+    <!-- Sección Frase / Intro -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl serif italic text-gray-400 max-w-4xl mx-auto leading-snug">
+                "El modelaje no es solo caminar; es la capacidad de contar una historia sin decir una sola palabra."
+            </h2>
+            <div class="w-20 h-[1px] bg-gold mx-auto mt-12"></div>
+        </div>
+    </section>
+
+    <!-- Programas de Formación -->
+    <section id="programas" class="py-20 bg-stone-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-5xl serif mb-4">Formación Profesional</h2>
+                    <p class="text-gray-500 uppercase tracking-widest text-xs">Elige tu camino hacia la pasarela</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Programa 1 -->
+                <div class="reveal-on-hover group">
+                    <div class="overflow-hidden aspect-[3/4] mb-6 bg-gray-200">
+                        <img src=imagen5.jpg alt="[Curso de Pasarela]" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl serif mb-2">Pasarela & Técnica</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Dominio total de la escena, postura y diversos estilos de caminata para alta costura y comercial.</p>
+                    <a href="#" class="text-[11px] font-bold uppercase tracking-widest border-b border-gold pb-1 hover:text-gold transition">Ver Detalles</a>
+                </div>
+
+                <!-- Programa 2 -->
+                <div class="reveal-on-hover group">
+                    <div class="overflow-hidden aspect-[3/4] mb-6 bg-gray-200">
+                        <img src=imagen6.jpg alt="[Fotopose]" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl serif mb-2">Fotopose & Expresión</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Conexión con la cámara, ángulos faciales y expresión corporal para campañas publicitarias y editoriales.</p>
+                    <a href="#" class="text-[11px] font-bold uppercase tracking-widest border-b border-gold pb-1 hover:text-gold transition">Ver Detalles</a>
+                </div>
+
+                <!-- Programa 3 -->
+                <div class="reveal-on-hover group">
+                    <div class="overflow-hidden aspect-[3/4] mb-6 bg-gray-200">
+                        <img src="imagen8.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl serif mb-2">Marca Personal & Etiqueta</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Manejo de redes sociales, casting presencial, protocolo social y nutrición para modelos.</p>
+                    <a href="#" class="text-[11px] font-bold uppercase tracking-widest border-b border-gold pb-1 hover:text-gold transition">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Inscripción / Casting -->
+    <section id="inscripcion" class="py-24 bg-dark text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col items-center text-center relative z-10">
+            <span class="text-gold tracking-[0.5em] uppercase text-xs mb-6">Audiciones Abiertas</span>
+            <h2 class="text-5xl md:text-7xl serif mb-10 italic">¿Tienes lo que se necesita?</h2>
+            <p class="max-w-2xl text-white/60 mb-12 font-light text-lg">
+                Buscamos nuevos rostros para nuestra agencia aliada. No importa tu estatura o medidas, buscamos personalidad y actitud.
+            </p>
+            <button class="bg-white text-dark px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-white transition-all duration-500">
+                Postularme al Casting
+            </button>
+        </div>
+        <!-- Decoración de fondo -->
+        <div class="absolute -bottom-20 -right-20 text-[200px] serif italic text-white/[0.03] pointer-events-none select-none">
+            PerfilClass
+        </div>
+    </section>
+
+    <!-- Galería de Talentos -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden">
+                    <img src=imagen1.jpg alt="[Talento 1]" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                </div>
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden md:mt-12">
+                    <img src=imagen2.jpg alt="[Talento 2]" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                </div>
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden">
+                    <img src=imagen3.jpg alt="[Talento 3]" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                </div>
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden md:mt-12">
+                    <img src=imagen4.jpg alt="[Talento 4]" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-stone-100 pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <h2 class="text-3xl font-bold tracking-[0.2em] uppercase serif mb-8">PerfilClass</h2>
+                    <p class="text-gray-500 max-w-sm mb-8">
+                        La academia de modelaje líder en formación integral. Elevamos tu potencial y te conectamos con la industria de la moda global.
+                    </p>
+                    <div class="flex space-x-6 text-xl">
+                       
+                    </div>
+                </div>
+               
+                <div>
+                    <h4 class="font-bold text-[10px] uppercase tracking-[0.3em] mb-8">Contacto</h4>
+                    <ul class="text-sm text-gray-500 space-y-4">
+                        <li>www.facebook.com/perfilclass</li>
+                        <li>57+31533383047</li>
+                        <li>k 5N 69-15,santiago se cali</li>
+                    </ul>
+                </div>
+
+                <div>
+                   
+                        
+                    </form>
+                </div>
+            </div>
+           
+            <div class="border-t border-gray-200 pt-10 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 uppercase tracking-[0.2em]">
+                <p>© 2026 PerfilClass Modeling Academy. Todos los derechos reservados.</p>
+                <div class="flex space-x-8 mt-6 md:mt-0">
+                    <a href="#" class="hover:text-gold">Privacidad</a>
+                    <a href="#" class="hover:text-gold">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
